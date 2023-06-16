@@ -32,7 +32,7 @@ code_word_wrap: false
 # formal:
 #   icon: link || the description || color
 social:
-  fab fa-github: https://github.com/C11NJXX || Github || '#24292e'
+  fa-brands fa-github-alt: https://github.com/C11NJXX || Github || '#24292e'
   fas fa-envelope: mailto:c_11njxxsmailbox@sina.com || Email || '#4a7dbe'
   fa-solid fa-graduation-cap: https://www.zust.edu.cn
   fa-brands fa-bilibili: https://space.bilibili.com/356158925
