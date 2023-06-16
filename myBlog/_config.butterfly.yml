@@ -33,14 +33,15 @@ code_word_wrap: false
 #   icon: link || the description || color
 social:
   fab fa-github: https://github.com/C11NJXX || Github || '#24292e'
-  fas fa-envelope: mailto:c11njxxsmailbox@sina.com || Email || '#4a7dbe'
-  #fa-brands fa-bilibili:
+  fas fa-envelope: mailto:c_11njxxsmailbox@sina.com || Email || '#4a7dbe'
+  fa-solid fa-graduation-cap: https://www.zust.edu.cn
+  fa-brands fa-bilibili: https://space.bilibili.com/356158925
 
 # Image (圖片設置)
 # --------------------------------------
 
 # Favicon（網站圖標）
-favicon: /img/favicon.png
+favicon: https://c11njxxsblog.oss-cn-hangzhou.aliyuncs.com/IMG_4035.ico
 
 # Avatar (頭像)
 avatar:
@@ -406,11 +407,11 @@ addtoany:
 comments:
   # Up to two comments system, the first will be shown as default
   # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus/Remark42/Artalk
-  use: # Valine,Disqus
+  use:  #Valine,Disqus
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
-  lazyload: false
+  lazyload: true
   count: false # Display comment count in post's top_img
   card_post_count: false # Display comment count in Home Page
 
@@ -919,6 +920,7 @@ inject:
     - <script async data-pjax src="/js/txmap.js"></script> # 腾讯位置API
     - <script type="text/javascript" src="https://cdn1.tianli0.top/npm/jquery@latest/dist/jquery.min.js"></script>
     - <script type="text/javascript" src="/js/rightmenu.js"></script>
+    - <script async src="/js/title.js"></script>
   # - <script src="xxxx"></script>
 
 # CDN
@@ -933,9 +935,9 @@ CDN:
   # The CDN provider of third party scripts (第三方 js 的 cdn 配置)
   # option: local/jsdelivr/unpkg/cdnjs/custom
   # when set it to local, you need to install hexo-butterfly-extjs
-  third_party_provider: jsdelivr
+  third_party_provider: cdnjs
 
-  # Add version number to url, true or false
+  # Add version number to CDN, true or false
   version: false
 
   # Custom format
@@ -943,62 +945,55 @@ CDN:
   custom_format:
 
   option:
-  # main_css:
-  # main:
-  # utils:
-  # translate:
-  # local_search:
-  # algolia_js:
-  # algolia_search:
-  # instantsearch:
-  # docsearch_js:
-  # docsearch_css:
-  # pjax:
-  # gitalk:
-  # gitalk_css:
-  # blueimp_md5:
-  # valine:
-  # disqusjs:
-  # disqusjs_css:
-  # twikoo:
-  # waline_js:
-  # waline_css:
-  # giscus:
-  # sharejs:
-  # sharejs_css:
-  # mathjax:
-  # katex:
-  # katex_copytex:
-  # mermaid:
-  # canvas_ribbon:
-  # canvas_fluttering_ribbon:
-  # canvas_nest:
-  # lazyload:
-  # instantpage:
-  # typed:
-  # pangu:
-  # fancybox_css:
-  # fancybox:
-  # medium_zoom:
-  # snackbar_css:
-  # snackbar:
-  # activate_power_mode:
-  # fireworks:
-  # click_heart:
-  # ClickShowText:
-  # fontawesome:
-  # flickr_justified_gallery_js:
-  # flickr_justified_gallery_css:
-  # aplayer_css:
-  # aplayer_js:
-  # meting_js:
-  # prismjs_js:
-  # prismjs_lineNumber_js:
-  # prismjs_autoloader:
-  # artalk_js:
-  # artalk_css:
-  # busuanzi:
-  # abcjs_basic_js:
+    # main_css:
+    # main:
+    # utils:
+    # translate: https://cdn1.tianli0.top/npm/js-heo@1.0.6/translate/tw_cn.js
+    # local_search:
+    # algolia_js:
+    algolia_search_v4: https://cdn.staticfile.org/algoliasearch/4.14.3/algoliasearch-lite.umd.min.js
+    instantsearch_v4: https://cdn.staticfile.org/instantsearch.js/4.49.2/instantsearch.production.min.js
+    pjax: https://lib.baomitu.com/pjax/0.2.8/pjax.min.js
+    # gitalk: https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/gitalk/1.7.2/gitalk.min.js
+    # gitalk_css: https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/gitalk/1.7.2/gitalk.min.css
+    # blueimp_md5:
+    # valine: https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/valine/1.4.16/Valine.min.js
+    # disqusjs: https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/disqusjs/1.3.0/disqus.js
+    # disqusjs_css: https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/disqusjs/1.3.0/disqusjs.css
+    twikoo: https://cdn.staticfile.org/twikoo/1.6.8/twikoo.all.min.js
+    # waline_js: https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/waline/1.5.4/Waline.min.js
+    # waline_css:
+    sharejs: https://lib.baomitu.com/social-share.js/1.0.16/js/social-share.min.js
+    sharejs_css: https://lib.baomitu.com/social-share.js/1.0.16/css/share.min.css
+    # mathjax: https://cdn.staticfile.org/mathjax/3.2.2/es5/mml-chtml.min.js
+    # katex: https://lib.baomitu.com/KaTeX/latest/katex.min.css
+    # katex_copytex:
+    # mermaid:
+    # canvas_ribbon:
+    # canvas_fluttering_ribbon:
+    # canvas_nest:
+    lazyload: https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/vanilla-lazyload/17.3.1/lazyload.iife.min.js
+    instantpage: https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/instant.page/5.1.0/instantpage.min.js
+    typed: https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/typed.js/2.0.12/typed.min.js
+    # pangu:
+    fancybox_css_v4: https://cdn.staticfile.org/fancyapps-ui/4.0.31/fancybox.min.css
+    fancybox_v4: https://cdn.staticfile.org/fancyapps-ui/4.0.31/fancybox.umd.min.js
+    # medium_zoom: https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/medium-zoom/1.0.6/medium-zoom.min.js
+    # snackbar_css: https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/node-snackbar/0.1.16/snackbar.min.css
+    # snackbar: https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/node-snackbar/0.1.16/snackbar.min.js
+    # activate_power_mode:
+    # fireworks:
+    # click_heart:
+    # ClickShowText:
+    fontawesomeV6: https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/6.0.0/css/all.min.css
+    # flickr_justified_gallery_js: https://cdn.staticfile.org/flickr-justified-gallery/2.1.2/fjGallery.min.js
+    # flickr_justified_gallery_css: https://cdn.staticfile.org/flickr-justified-gallery/2.1.2/fjGallery.min.css
+    aplayer_css: https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.css
+    aplayer_js: https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js
+    meting_js: https://cdn1.tianli0.top/npm/js-heo@1.0.12/metingjs/Meting.min.js
+    # prismjs_js: https://cdn1.tianli0.top/npm/prismjs@1.1.0/prism.js
+    # prismjs_lineNumber_js: https://cdn1.tianli0.top/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js
+    # prismjs_autoloader: https://cdn1.tianli0.top/npm/prismjs/plugins/autoloader/prism-autoloader.min.js
 
 
 # electric_clock (安知鱼电子钟)
