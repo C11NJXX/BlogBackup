@@ -915,8 +915,10 @@ inject:
     - <div class="aplayer no-destroy" data-id="60198" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"> </div>
     - <script async src="//npm.elemecdn.com/pace-js@1.2.4/pace.min.js"></script>
     - <script src="/js/sun_moon.js" async></script>
-    - <script src="https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js"></script> # jQuery
+    - <script type="text/javascript" src="https://unpkg.zhimg.com/jquery@latest/dist/jquery.min.js"></script>
     - <script async data-pjax src="/js/txmap.js"></script> # 腾讯位置API
+    - <script type="text/javascript" src="https://cdn1.tianli0.top/npm/jquery@latest/dist/jquery.min.js"></script>
+    - <script type="text/javascript" src="/js/rightmenu.js"></script>
   # - <script src="xxxx"></script>
 
 # CDN
