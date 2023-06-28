@@ -13,10 +13,15 @@ menu:
   时间轴: /archives/ || fas fa-archive
   标签: /tags/ || fas fa-tags
   分类: /categories/ || fas fa-folder-open
-  清单||fa fa-heartbeat || hide:
+#      学习: /categories/ || fa-duotone fa-books
+#      生活: /movies/ || fa-solid fa-leaf-maple
+  休闲||fa fa-heartbeat || hide:
     音乐: /music/ || fas fa-music
     电影: /movies/ || fas fa-video
+    照片: /Gallery/ || fa-duotone fa-image
   友链: /link/ || fas fa-link
+  评论: /comments/ || fa-solid fa-comments
+  说说: /artitalk/ || fa-light fa-comment-dots
   关于: /about/ || fas fa-heart
 # Code Blocks (代碼相關)
 # --------------------------------------
@@ -407,7 +412,7 @@ addtoany:
 comments:
   # Up to two comments system, the first will be shown as default
   # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus/Remark42/Artalk
-  use:  #Valine,Disqus
+  use: Giscus #Valine,Disqus
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
@@ -492,14 +497,32 @@ twikoo:
 
 # Giscus
 # https://giscus.app/
+#giscus:
+#  repo: C11NJXX/CommentsForBlog
+#  repo_id: R_kgDOJyFR2A
+#  category_id: General
+#  theme:
+#    light: light
+#    dark: dark
+#  option:
 giscus:
-  repo:
-  repo_id:
-  category_id:
-  theme:
-    light: light
-    dark: dark
-  option:
+  enable: true
+  repo: C11NJXX/CommentsForBlog # Github repository name
+  repo_id: R_kgDOJyFR2A # Github repository id
+  category: General # Github discussion category
+  category_id: DIC_kwDOJyFR2M4CXW-5 # Github discussion category id
+  # Available values: pathname | url | title | og:title
+  mapping: url
+  # Available values: 0 | 1
+  reactions_enabled: 1
+  # Available values: 0 | 1
+  emit_metadata: 1
+  # Available values: light | dark | dark_high_contrast | transparent_dark | preferred-color-scheme
+  theme: preferred_color_scheme
+  # Available values: en | zh-C
+  lang: zh_CN
+  # Available value: anonymous
+  crossorigin: anonymous
 
 # Remark42
 # https://remark42.com/docs/configuration/frontend/
@@ -855,7 +878,7 @@ snackbar:
 
 # https://instant.page/
 # prefetch (預加載)
-instantpage: false
+instantpage: true
 
 # https://github.com/vinta/pangu.js
 # Insert a space between Chinese character and English character (中英文之間添加空格)
@@ -1017,3 +1040,53 @@ electric_clock:
   gaud_map_key:  # 高得地图web服务key
   default_rectangle: false # 开启后将一直显示rectangle位置的天气，否则将获取访问者的地理位置与天气
   rectangle: 113.34532,23.15624 # 获取访问者位置失败时会显示该位置的天气，同时该位置为开启default_rectangle后的位置
+
+# hexo-filter-gitcalendar
+# see https://akilar.top/posts/1f9c68c9/
+gitcalendar:
+  enable: true # 开关
+  priority: 5 #过滤器优先权
+  enable_page: / # 应用页面
+  # butterfly挂载容器
+  layout: # 挂载容器类型
+    type: id
+    name: recent-posts
+    index: 0
+  # volantis挂载容器
+  # layout:
+  #   type: class
+  #   name: l_main
+  #   index: 0
+  # matery挂载容器
+  # layout:
+  #   type: id
+  #   name: indexCard
+  #   index: 0
+  # mengd挂载容器
+  # layout:
+  #   type: class
+  #   name: content
+  #   index: 0
+  user: C11NJXX #git用户名
+  apiurl: git-calendar-on-blog-dkb4k2r11-c11njxx.vercel.app
+  minheight:
+    pc: 280px #桌面端最小高度
+    mibile: 0px #移动端最小高度
+  color: "['#e4dfd7', '#f9f4dc', '#f7e8aa', '#f7e8aa', '#f8df72', '#fcd217', '#fcc515', '#f28e16', '#fb8b05', '#d85916', '#f43e06']" #橘黄色调
+  # color: "['#ebedf0', '#fdcdec', '#fc9bd9', '#fa6ac5', '#f838b2', '#f5089f', '#c4067e', '#92055e', '#540336', '#48022f', '#30021f']" #浅紫色调
+  # color: "['#ebedf0', '#f0fff4', '#dcffe4', '#bef5cb', '#85e89d', '#34d058', '#28a745', '#22863a', '#176f2c', '#165c26', '#144620']" #翠绿色调
+  # color: "['#ebedf0', '#f1f8ff', '#dbedff', '#c8e1ff', '#79b8ff', '#2188ff', '#0366d6', '#005cc5', '#044289', '#032f62', '#05264c']" #天青色调
+  container: .recent-post-item(style='width:100%;height:auto;padding:10px;') #父元素容器，需要使用pug语法
+  gitcalendar_css: https://npm.elemecdn.com/hexo-filter-gitcalendar/lib/gitcalendar.css
+  gitcalendar_js: https://npm.elemecdn.com/hexo-filter-gitcalendar/lib/gitcalendar.js
+
+  # Artitalk
+  # see https://artitalk.js.org/
+  artitalk:
+    enable: true
+    appId: VOK0P2zyzfi6FSP1sig60lDG-MdYXbMMI
+    appKey: kwu9pFmqcqfRTSjDeXJRghSR
+    path: /source/artitalk/index.md
+    js: https://cdn.jsdelivr.net/npm/artitalk
+    option:
+    front_matter:

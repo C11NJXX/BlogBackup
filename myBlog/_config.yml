@@ -99,12 +99,11 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: butterfly
 
-# Deployment
-## Docs: https://hexo.io/docs/one-command-deployment
+#
 deploy:
   type: git
-  repository: git@github.com:C11NJXX/C11NJXX.github.io.git
-  branch: main
+  repo: git@c11njxx.top:/home/repo/hexo.git
+  branch: master
 
 # Live2D
 ## https://github.com/EYHN/hexo-helper-live2d

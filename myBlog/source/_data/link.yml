@@ -8,10 +8,10 @@
       siteshot: https://source.fomal.cc/siteshot/hexo.io.jpg
       
 - class_name: 2.友情链接
-  class_desc: 一些好朋友~~
+  class_desc: 本网站由以下博客提供搭建教程～
   link_list:
     - name: Fomalhaut🥝
-      link: https://fomal.cc/
+      link: https://fomal.cn/
       avatar: /assets/head.jpg
       descr: Future is now 🍭🍭🍭
       siteshot: https://source.fomal.cc/siteshot/www.fomal.cn.jpg
