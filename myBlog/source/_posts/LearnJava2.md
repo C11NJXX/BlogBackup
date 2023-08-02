@@ -2,7 +2,7 @@
 title: Java集合
 tags: [Java，集合,List,Map]
 categories: [学习]
-cover: https://c11njxxsblog.oss-cn-hangzhou.aliyuncs.com/202308021344646.png
+cover: https://c11njxxsblog.oss-cn-hangzhou.aliyuncs.com/202308021631325.png
 swiper_index: 2 #置顶轮播图顺序，非负整数，数字越大越靠前
 description: Java学习记录
 
