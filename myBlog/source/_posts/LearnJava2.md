@@ -1,5 +1,5 @@
 ---
-title: Java集合
+title: Java集合1
 tags: [Java，集合,List,Map]
 categories: [学习]
 cover: https://c11njxxsblog.oss-cn-hangzhou.aliyuncs.com/202308021631325.png

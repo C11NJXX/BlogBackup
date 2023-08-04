@@ -88,5 +88,9 @@ class Solution {
 
 debug真的越来越体会到他的实用性，在我盯着代码死死看不出问题的时候，也许一个断点就能帮助我很多！
 
+附上一张图
+
+![](https://c11njxxsblog.oss-cn-hangzhou.aliyuncs.com/202308031645001.png)
+
 ---
 
